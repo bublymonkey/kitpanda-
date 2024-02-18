@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 15.214.19.151
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1707764491306
+  login: 1707764183258
+money: '0'
+last-account-name: ragebutt
+lastlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -683.4160505802131
+  y: 56.0
+  z: -166.8884170240639
+  yaw: -208.05014038085938
+  pitch: -12.750056266784668
+logoutlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -797.6999999880791
+  y: 65.0
+  z: -165.4237292226966
+  yaw: 158.25921630859375
+  pitch: 21.300395965576172

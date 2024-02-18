@@ -1,0 +1,26 @@
+# === Skript's variable storage ===
+# Please do not modify this file manually!
+#
+# version: 2.7.0-beta2
+
+backwards, long, 0000000000000000
+deaths::<player>, long, 0000000000000000
+deaths::calthepanda, long, 0000000000000001
+deaths::eh7, long, 0000000000000001
+forward, long, 0000000000000000
+forwards, long, 0000000000000000
+kdr::<player>, long, 0000000000000000
+kdr::calthepanda, double, 3FF0000000000000
+kills::<player>, long, 0000000000000000
+kills::calthepanda, long, 0000000000000001
+kills::eh7, long, 0000000000000001
+launchpadactive, long, 0000000000000000
+left, long, 0000000000000000
+money::<player>, long, 0000000000000000
+money::calthepanda, long, 00000000009896D7
+money::eh7, long, 0000000000000019
+rdistance, long, 0000000000000000
+right, long, 0000000000000000
+sneakoniron, long, 0000000000000000
+"total directions", long, 0000000000000000
+

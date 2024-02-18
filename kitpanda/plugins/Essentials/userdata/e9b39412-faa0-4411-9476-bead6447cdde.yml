@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 132.242.229.190
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1707718012704
+  login: 1707717346551
+money: '0'
+last-account-name: SirAxewell
+lastlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -691.9864593484233
+  y: 22.79673560066869
+  z: -143.8560328390952
+  yaw: -1.350000023841858
+  pitch: 10.04999828338623
+logoutlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -697.3028698431399
+  y: 56.0
+  z: -149.4805123543897
+  yaw: 125.32269287109375
+  pitch: -18.54412841796875

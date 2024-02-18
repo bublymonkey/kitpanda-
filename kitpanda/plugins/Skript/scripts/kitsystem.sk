@@ -1,0 +1,159 @@
+on inventory click:
+	if name of event-inventory is "            &3&lCLASS KITS ":
+		if index of event-slot = 2:
+			if {equipkit::%uuid of player%} > 0:
+				send "&8&lYou must die before you can equiped another kit." to player
+				play sound "entity.villager.no"
+				close player's inventory
+			if {equipkit::%uuid of player%} = 0:
+				cancel event 
+				equip player with golden helmet named "&6Paladin helmet"
+				equip player with golden chestplate named "&6Paladin chestplate"
+				equip player with iron leggings named "&6Paladin leggings"
+				equip player with chainmail boots named "&6Paladin boots"
+				give player gold axe named "&6Paladin axe"
+				close player's inventory
+				play sound "item.armor.equip_chain"
+				set {equipkit::%uuid of player%} to 1
+on inventory click:
+	if name of event-inventory is "            &3&lCLASS KITS ":
+		if index of event-slot = 4:
+			if {equipkit::%uuid of player%} > 0:
+				send "&8&lYou must die before you can equiped another kit." to player
+				play sound "entity.villager.no"
+				close player's inventory
+			if {equipkit::%uuid of player%} = 0:
+				cancel event 
+				equip player with iron helmet named "&4Berserker helmet"
+				equip player with leather chestplate named "&4Berserker chestplate"
+				equip player with iron leggings named "&4Berserker leggings"
+				equip player with iron boots named "&4Berserker boots"
+				give player stone axe named "&4Berserker Battleaxe"	
+				close player's inventory
+				play sound "item.armor.equip_chain"
+				set {equipkit::%uuid of player%} to 2
+on inventory click:
+	if name of event-inventory is "            &3&lCLASS KITS ":
+		if index of event-slot = 6:
+			if {equipkit::%uuid of player%} > 0:
+				send "&8&lYou must die before you can equiped another kit." to player
+				play sound "entity.villager.no"
+				close player's inventory
+			if {equipkit::%uuid of player%} = 0:
+				cancel event 
+				equip player with turtle helmet named "&2Turtle helmet"
+				equip player with iron chestplate named "&2Turtle chestplate"
+				equip player with iron leggings named "&2Turtle leggings"
+				equip player with chainmail boots named "&2Turtle boots"
+				give player turtle egg named "&2Turtle Sword"
+				close player's inventory
+				play sound "item.armor.equip_chain"
+				set {equipkit::%uuid of player%} to 3
+on inventory click:
+	if name of event-inventory is "            &3&lCLASS KITS":
+		if index of event-slot = 2:
+			if {equipkit::%uuid of player%} > 0:
+				send "&8&lYou must die before you can equiped another kit." to player
+				play sound "entity.villager.no"
+				close player's inventory
+			if {equipkit::%uuid of player%} = 0:
+				cancel event 
+				equip player with leather helmet named "&bSamurai helmet"
+				equip player with chainmail chestplate named "&bSamurai chestplate"
+				equip player with iron leggings named "&bSamurai leggings"
+				equip player with leather boots named "&bSamurai boots"
+				give player iron sword named "&bSamurai Katana"
+				close player's inventory
+				play sound "item.armor.equip_chain"
+				set {equipkit::%uuid of player%} to 4
+on inventory click:
+	if name of event-inventory is "            &3&lCLASS KITS":
+		if index of event-slot = 4:
+			if {equipkit::%uuid of player%} > 0:
+				send "&8&lYou must die before you can equiped another kit." to player
+				play sound "entity.villager.no"
+				close player's inventory
+			if {equipkit::%uuid of player%} = 0:
+				cancel event 
+				equip player with iron helmet named "Knight helmet"
+				equip player with chainmail chestplate named "Knight chestplate"
+				equip player with iron leggings named "Knight leggings"
+				equip player with leather boots named "Knight boots"
+				give player iron sword named "Knight Long Sword"
+				close player's inventory
+				play sound "item.armor.equip_chain"
+				set {equipkit::%uuid of player%} to 5
+on inventory click:
+	if name of event-inventory is "            &3&lCLASS KITS":
+		if index of event-slot = 6:
+			if {equipkit::%uuid of player%} > 0:
+				send "&8&lYou must die before you can equiped another kit." to player
+				play sound "entity.villager.no"
+				close player's inventory
+			if {equipkit::%uuid of player%} = 0:
+				cancel event 
+				equip player with leather helmet named "&Ninja helmet"
+				equip player with chainmail chestplate named "&0Ninja chestplate"
+				equip player with chainmail leggings named "&0Ninja leggings"
+				equip player with leather boots named "&0Ninja boots"
+				give player iron sword named "&0Ninja Tanto"
+				close player's inventory
+				play sound "item.armor.equip_chain"
+				set {equipkit::%uuid of player%} to 6
+on inventory click:
+	if name of event-inventory is "            &3&lCLASS KITS  ":
+		if index of event-slot = 2:
+			if {equipkit::%uuid of player%} > 0:
+				send "&8&lYou must die before you can equiped another kit." to player
+				play sound "entity.villager.no"
+				close player's inventory
+			if {equipkit::%uuid of player%} = 0:
+				cancel event 
+				equip player with iron helmet named "&cMercenary helmet"
+				equip player with leather chestplate named "&cMercenary chestplate"
+				equip player with iron leggings named "&cMercenary leggings"
+				equip player with iron boots named "&cMercenary boots"
+				give 1 of crossbow of multishot named "&cMercenary Crossbow" to player 
+				close player's inventory
+				play sound "item.armor.equip_chain"
+				set {equipkit::%uuid of player%} to 7
+on inventory click:
+	if name of event-inventory is "            &3&lCLASS KITS  ":
+		if index of event-slot = 4:
+			if {equipkit::%uuid of player%} > 0:
+				send "&8&lYou must die before you can equiped another kit." to player
+				play sound "entity.villager.no"
+				close player's inventory
+			if {equipkit::%uuid of player%} = 0:
+				cancel event 
+				equip player with leather helmet named "&5Bowman helmet"
+				equip player with chainmail chestplate named "&5Bowman chestplate"
+				equip player with chainmail leggings named "&5Bowman leggings"
+				equip player with leather boots named "&5Bowman boots"
+				give 1 of bow of power 1 named "&5Bowman Bow" to player
+				close player's inventory
+				play sound "item.armor.equip_chain"
+				set {equipkit::%uuid of player%} to 8
+on inventory click:
+	if name of event-inventory is "            &3&lCLASS KITS  ":
+		if index of event-slot = 6:
+			if {equipkit::%uuid of player%} > 0:
+				send "&8&lYou must die before you can equiped another kit." to player
+				play sound "entity.villager.no"
+				close player's inventory
+			if {equipkit::%uuid of player%} = 0:
+				cancel event 
+				equip player with chainmail helmet named "&eRanger helmet"
+				equip player with iron chestplate named "&eRanger chestplate"
+				equip player with leather leggings named "&eRanger leggings"
+				equip player with iron boots named "&eRanger boots"
+				give 1 of bow of power 1 named "&eRanger Bow" to player
+				close player's inventory
+				play sound "item.armor.equip_chain"
+				set {equipkit::%uuid of player%} to 9
+					
+					
+					
+command /checkkit:
+	trigger:
+		send "%{equipkit::%uuid of player%}%" to player

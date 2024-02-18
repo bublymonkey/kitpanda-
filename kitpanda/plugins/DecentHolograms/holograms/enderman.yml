@@ -1,0 +1,12 @@
+location: World_1:-585.408:62.533:-202.667
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&bBestEnderman25'
+    height: 0.3
+  actions: {}

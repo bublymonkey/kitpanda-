@@ -1,0 +1,34 @@
+on drop:
+	if event-item is golden axe named "Paladin axe":
+		Send "&b&lCannot drop class weapon" to player
+		cancel event
+	if event-item is stone axe named "Battleaxe":
+		Send "&b&lCannot drop class weapon" to player
+		cancel event
+	if event-item is turtle egg named "Turtle Sword":
+		Send "&b&lCannot drop class weapon" to player
+		cancel event
+	if event-item is iron sword named "Tanto":
+		Send "&b&lCannot drop class weapon" to player
+		cancel event
+	if event-item is iron sword named "Katana":
+		Send "&b&lCannot drop class weapon" to player
+		cancel event
+	if event-item is iron sword named "Long Sword":
+		Send "&b&lCannot drop class weapon" to player
+		cancel event
+	if event-item is crossbow of multishot named "Crossbow":
+		Send "&b&lCannot drop class weapon" to player
+		cancel event
+	if event-item is bow of power 1 named "Long bow":
+		Send "&b&lCannot drop class weapon" to player
+		cancel event
+	if event-item is bow of power 1 named "Ranger Bow":
+		Send "&b&lCannot drop class weapon" to player
+		cancel event
+		
+		
+
+
+	
+	

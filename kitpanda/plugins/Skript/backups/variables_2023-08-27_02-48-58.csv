@@ -1,0 +1,15 @@
+# === Skript's variable storage ===
+# Please do not modify this file manually!
+#
+# version: 2.7.0-beta2
+
+deaths::calthepanda, long, 0000000000000003
+deaths::eh7, long, 0000000000000004
+forwards, long, 0000000000000000
+kdr::calthepanda, double, 3FF5555555555555
+kdr::eh7, double, 3FE8000000000000
+kills::calthepanda, long, 0000000000000004
+kills::eh7, long, 0000000000000003
+money::calthepanda, long, 0000000000989722
+money::eh7, long, 000000000000004B
+

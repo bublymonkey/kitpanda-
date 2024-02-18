@@ -1,0 +1,65 @@
+variables:
+		{east} = 0
+		{west} = 0
+		{north} = 0
+		{south} = 0
+		{sneakoniron} = 0
+		{total directions} = 0
+		{rdistance} = 0
+		{launchpadactive} = 0
+		
+on sneak toggle: 
+	if block under player is block of iron:
+		set {sneakoniron} to 1
+		wait 20 ticks
+		set {sneakoniron} to 0
+on sneak toggle:
+	if block under player is block of iron:
+		set {_number} to a random integer between 1 and 4
+		if {_number} = 1:
+			set {east} to 1
+		if {_number} = 2:
+			set {west} to 1
+		if {_number} = 3:
+			set {north} to 1
+		if {_number} = 4:
+			set {south} to 1 
+			
+on sneak toggle:
+	if block under player is block of iron:
+		set {_pos3} to location(-692, 65, -138, world "World_1")
+		set {_pos4} to location(-694, 65, -141, world "World_1")
+
+on sneak toggle:
+	if block under player is block of iron:
+		set {rdistance} to a random integer between 1.5 and 5
+		push player up at speed 5
+		add 1 to {launchpadactive}
+		wait 5 ticks
+	if {launchpadactive} > 0:
+		set {_pos1} to location(-694, 41, -186, world "World_1")
+		set {_pos2} to location(-692, 55, -183, world "World_1")
+		set blocks within {_pos1} and {_pos2} to air
+		wait 20 ticks
+	if {east} = 1:
+		push player left at speed {rdistance}
+		set {east} to 0
+	if {west} = 1: 
+		push player right at speed {rdistance}
+		set {west} to 0
+	if {north} = 1: 
+		push player right at speed {rdistance}
+		set {north} to 0
+	if {south} = 1:
+		push player -1 forwards at speed {rdistance}
+		set {south} to 0
+
+
+
+		
+		
+		
+	
+		
+		
+		

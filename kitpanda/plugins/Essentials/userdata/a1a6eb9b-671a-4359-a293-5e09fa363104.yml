@@ -1,0 +1,40 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 223.6.76.228
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1695872431372
+  login: 1695872346672
+  kits:
+    panda: 1693111030511
+money: '0'
+last-account-name: Alienboy47MR
+lastlocation:
+  world: b12ce0e7-8258-48b4-818d-dbb0b99f3b1e
+  world-name: world
+  x: 22.5
+  y: 64.0
+  z: -41.5
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -706.0065294380418
+  y: 21.0
+  z: -162.3564949501605
+  yaw: 86.03167724609375
+  pitch: 13.216878890991211

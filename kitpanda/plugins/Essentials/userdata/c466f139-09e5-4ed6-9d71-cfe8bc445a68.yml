@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 109.217.228.209
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1707718315733
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1707718317405
+  login: 1707717218551
+money: '0'
+last-account-name: xdle
+lastlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -733.087475932507
+  y: 107.81704921689885
+  z: -117.26356340525108
+  yaw: 215.2497100830078
+  pitch: -19.349870681762695
+logoutlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -692.5
+  y: 22.0
+  z: -161.5
+  yaw: 0.0
+  pitch: 0.0

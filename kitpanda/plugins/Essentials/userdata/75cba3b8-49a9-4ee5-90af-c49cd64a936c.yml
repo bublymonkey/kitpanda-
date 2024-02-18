@@ -1,0 +1,30 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 254.55.199.129
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 0
+  login: 1693463812070
+money: '0'
+last-account-name: CyberRed69
+lastlocation:
+  world: b12ce0e7-8258-48b4-818d-dbb0b99f3b1e
+  world-name: world
+  x: 22.5
+  y: 64.0
+  z: -41.5
+  yaw: 0.0
+  pitch: 0.0

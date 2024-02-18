@@ -1,0 +1,35 @@
+#Owner:
+#  tabprefix: "%luckperms-prefix%"
+#  tagprefix: "%luckperms-prefix%"
+Admin:
+  tagprefix: '%luckperms-prefix%'
+  tabprefix: '&8[&aAdmin&8] '
+Mod:
+  tabprefix: '%luckperms-prefix%'
+  tagprefix: '%luckperms-prefix%'
+Helper:
+  tabprefix: '%luckperms-prefix%'
+  tagprefix: '%luckperms-prefix%'
+Builder:
+  tabprefix: '%luckperms-prefix%'
+  tagprefix: '%luckperms-prefix%'
+Default:
+  tabprefix: '%luckperms-prefix%'
+  tagprefix: '%luckperms-prefix%'
+example_group:
+  header:
+  - This is an example of per-group header/footer
+  footer:
+  - applied to a group
+_DEFAULT_:
+  tabprefix: '%luckperms-prefix%'
+  tagprefix: '%luckperms-prefix%'
+  customtabname: '%player%'
+  customtagname: '%player%'
+  tabsuffix: '%luckperms-suffix%'
+  tagsuffix: '%luckperms-suffix%'
+per-world:
+  world1:
+    Owner:
+      tabprefix: '%luckperms-prefix%'
+      tagprefix: '%luckperms-prefix%'

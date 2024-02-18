@@ -1,0 +1,12 @@
+location: World_1:-692.548:59.000:-161.531
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&a&l Teleport to sky island'
+    height: 0.3
+  actions: {}

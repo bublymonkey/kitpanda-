@@ -1,0 +1,5 @@
+command /discord:
+	trigger:
+		send "&8[&9&lKit&1&lPanda&8] &b%player% used &l&b/discord. <link:https://discord.gg/A2Bssjpx65>&9&nClick Here" 
+
+		

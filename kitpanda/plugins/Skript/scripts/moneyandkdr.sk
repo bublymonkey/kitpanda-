@@ -1,0 +1,99 @@
+on join:
+	if {money::%uuid of player%} is not set:
+		set {money::%uuid of player%} to 0
+	if {deaths::%uuid of player%} is not set:
+		set {deaths::%uuid of player%} to 0
+	if {kills::%uuid of player%} is not set:
+		set {kills::%uuid of player%} to 0
+	if {kdr::%uuid of player%} is not set:
+		set {kdr::%uuid of player%} to 0
+	if {equipkit::%uuid of player%} is not set:
+		set {equipkit::%uuid of player%} to 0
+	if {kills::%uuid of player%} is 0:
+		if {deaths::%uuid of player%} is 0:
+			set {kdr::%uuid of player%} to 0
+	if {skulls::%uuid of player%} is not set:
+		set {skulls::%uuid of player%} to 0
+	if {skullmulti::%uuid of player%} is not set:
+		set {skullmulti::%uuid of player%} to 100
+
+
+
+
+on respawn:
+	if {chosenclass::%uuid of player%} = "&b&lSwordsman":
+		wait 1 tick
+		set {_sclass} to a new chest inventory with 1 rows named "            &3&lCLASS KITS"
+		set slot 2 of {_sclass} to iron sword named "Samurai" with lore "&7Click to equip kit"
+		set slot 4 of {_sclass} to iron helmet named "Knight" with lore "&7Click to equip kit"
+		set slot 6 of {_sclass} to leather boots named "Ninja" with lore "&7Click to equip kit"
+		open {_sclass} to player
+	if {chosenclass::%uuid of player%} = "&c&lJuggernaut":
+		wait 1 tick
+		set {_jclass} to a new chest inventory with 1 rows named "            &3&lCLASS KITS "
+		set slot 2 of {_jclass} to golden helmet named "Paladin" with lore "&7Click to equip kit"
+		set slot 4 of {_jclass} to stone axe named "Berserker" with lore "&7Click to equip kit"
+		set slot 6 of {_jclass} to turtle helmet named "Turtle" with lore "&7Click to equip kit"
+		open {_jclass} to player
+	if {chosenclass::%uuid of player%} = "&e&lMarksman":
+		wait 1 tick
+		set {_mclass} to a new chest inventory with 1 rows named "            &3&lCLASS KITS  "
+		set slot 2 of {_mclass} to crossbow named "Mercenary" with lore "&7Click to equip kit"
+		set slot 4 of {_mclass} to bow named "Bowman" with lore "&7Click to equip kit"
+		set slot 6 of {_mclass} to lead named "Ranger" with lore "&7Click to equip kit"
+		open {_mclass} to player
+	
+	
+on death of player:
+	if attacker is a player:
+		add 25 to {money::%uuid of attacker%}
+		drop victim's skull at victim's location
+		add 1 to {kills::%uuid of attacker%}
+		add 1 to {deaths::%uuid of victim%}
+		set {kdr::%uuid of attacker%} to {kills::%uuid of attacker%}/{deaths::%uuid of attacker%}
+		set {kdr::%victim%} to {kills::%uuid of victim%}/{deaths::%uuid of victim%}
+		execute console command "clear %victim% **"
+on death of player:
+	set {equipkit::%uuid of victim%} to 0
+	execute console command "clear %victim% **"
+		
+		
+command /bal [<player>]:
+	trigger:
+		if arg 1 is not set:
+			send "&2You have &a$%{Money::%uuid of player%}% in your account" to player
+		else:
+			send "&2%arg 1% has &a$%{Money::%uuid of arg 1%}% in their account" to player
+command /kdr [<player>]:
+	trigger:
+		if arg 1 is not set:
+			send "your kdr is %{kdr::%uuid of player%}%" to player
+		else:
+			send "%arg 1%'s kdr is %{kdr::%arg 1%}%"
+			
+command /baladd [<player>] [<integer>]:
+	permission: bal.add
+	permission message: "&bro really tried it"
+	trigger:
+		if arg 1 is not set:
+			add arg 2 to {money::%uuid of player%}
+			send "&2You have succesfully added &a$%arg 2% &2to your &2ballance! Your &2ballance is now &a%{money::%uuid of player%}%"
+		else:
+			add arg 2 to {money::%uuid of arg 1%}
+			send "&2You have succesfully added &a$%arg 2% &2to &a%arg 1%'s &2ballance! &a%arg 1%'s &2ballance is now &a%{money::%uuid of arg 1%}%"
+
+
+command /balset [<player>] [<integer>]:
+	permission: bal.set
+	permission message: "&bro really tried it"
+	trigger:
+		if arg 1 is not set:
+			set {money::%uuid of player%} to arg 2
+			send "&2You have succesfully set your balance to &a$%arg 2%! Your &2ballance is now &a%{money::%uuid of player%}%"
+		else:
+			set {money::%uuid of arg 1%} to arg 2
+			send "&2You have succesfully added &a$%arg 2% &2to &a%arg 1%'s &2ballance! &a%arg 1%'s &2ballance is now &a%{money::%uuid of arg 1%}%"
+	
+		
+			
+			

@@ -1,0 +1,21 @@
+options:
+	server: &9&lKit&1&lPanda
+
+
+	
+every 1 second:
+	loop all players:
+		set {_playercount} to number of all players
+		wipe loop-player's sidebar
+		set name of sidebar of loop-player to "{@server}"
+		set score "         &7&m----------" in sidebar of loop-player to 8
+		set score " &5&lPLAYER &7> &5%loop-player%" in sidebar of loop-player to 7
+		set score " &3&lCLASS &7> %{chosenclass::%uuid of loop-player%}%" in sidebar of loop-player to 6
+		set score "" in sidebar of loop-player to 5
+		set score " &2&lBALANCE &7> &a$%{money::%uuid of loop-player%}%" in sidebar of loop-player to 4
+		set score " &r&lSKULLS &7> &r%{skulls::%uuid of loop-player%}%" in sidebar of loop-player to 3
+		set score " &4&lKILLS &7> &c%{kills::%uuid of loop-player%}%" in sidebar of loop-player to 2
+		set score " &8&lDEATHS &7> &f%{deaths::%uuid of loop-player%}%" in sidebar of loop-player to 1
+		set score " &6&lKDR &7> &e%{kdr::%uuid of loop-player%}%" in sidebar of loop-player to 0
+		
+		

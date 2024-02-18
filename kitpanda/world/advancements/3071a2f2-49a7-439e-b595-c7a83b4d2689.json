@@ -1,0 +1,22 @@
+{
+  "minecraft:recipes/decorations/torch": {
+    "criteria": {
+      "has_stone_pickaxe": "2023-08-17 16:06:52 +0000"
+    },
+    "done": true
+  },
+  "minecraft:story/upgrade_tools": {
+    "criteria": {
+      "stone_pickaxe": "2023-08-17 16:06:52 +0000"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:forest": "2023-08-17 16:06:53 +0000",
+      "minecraft:beach": "2023-08-17 16:06:52 +0000"
+    },
+    "done": false
+  },
+  "DataVersion": 2586
+}

@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 59.92.36.16
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1707374319943
+  login: 1707374232738
+money: '0'
+last-account-name: KaranOp
+lastlocation:
+  world: b12ce0e7-8258-48b4-818d-dbb0b99f3b1e
+  world-name: world
+  x: 22.5
+  y: 64.0
+  z: -41.5
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -682.6639844393187
+  y: 56.0
+  z: -189.85158000321496
+  yaw: -4.65435791015625
+  pitch: -36.799495697021484

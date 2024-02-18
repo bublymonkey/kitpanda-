@@ -1,0 +1,208 @@
+
+
+	
+
+
+
+on npc right click:
+	if npc is 1:
+		if player is holding player head:
+			set {_sellhead} to a new chest inventory with 1 row named "             &2&lSell head"
+			set slot 0 of {_sellhead} to black glass pane named " " 
+			set slot 1 of {_sellhead} to black glass pane named " " 
+			set slot 2 of {_sellhead} to black glass pane named " " 
+			set slot 3 of {_sellhead} to green glass pane named "&2&lSell Head" 
+			set slot 4 of {_sellhead} to black glass pane named " " 
+			set slot 5 of {_sellhead} to red glass pane named "&4&lCancel" 
+			set slot 6 of {_sellhead} to black glass pane named " " 
+			set slot 7 of {_sellhead} to black glass pane named " " 
+			set slot 8 of {_sellhead} to black glass pane named " " 
+			open {_sellhead} to player 
+		else: 
+			send "&4&lYou must holding head in hand to sell" to player
+			close inventory of player
+on inventory click:
+	if name of event-inventory is "             &2&lSell head":
+		if index of event-slot = 3:
+			if player is holding player head:
+				set {headamount::%uuid of player%} to item amount of player's tool
+				play sound "minecraft:entity.experience_orb.pickup"
+				remove held item of player from player
+				close inventory of player
+				add {headamount::%uuid of player%} to {skulls::%uuid of player%}
+				add {headamount::%uuid of player%} * {skullmulti::%uuid of player%} to {money::%uuid of player%}
+				send "&l&2You have succesfully sold the head. You have been awarded &a$%{headamount::%uuid of player%} * {skullmulti::%uuid of player%}% &2and one skull has been added to your account."
+on inventory click:
+	if name of event-inventory is "             &2&lSell head":
+		if index of event-slot = -1:
+			send "how" to player
+		else:
+			cancel event
+
+#shop------------------			
+on npc right click:
+	if npc is 12:
+		set {_shopcitizen} to a new chest inventory with 3 row named "                 &6&lShop"
+		set slot 0 of {_shopcitizen} to black glass pane named " " 
+		set slot 1 of {_shopcitizen} to black glass pane named " " 
+		set slot 2 of {_shopcitizen} to black glass pane named " " 
+		set slot 3 of {_shopcitizen} to black glass pane named " " 
+		set slot 4 of {_shopcitizen} to black glass pane named " " 
+		set slot 5 of {_shopcitizen} to black glass pane named " " 
+		set slot 6 of {_shopcitizen} to black glass pane named " " 
+		set slot 7 of {_shopcitizen} to black glass pane named " " 
+		set slot 8 of {_shopcitizen} to black glass pane named " " 
+		set slot 9 of {_shopcitizen} to black glass pane named " " 
+		set slot 10 of {_shopcitizen} to black glass pane named " " 
+		set slot 11 of {_shopcitizen} to a ender pearl named "&e&lItems" 
+		set slot 12 of {_shopcitizen} to black glass pane named " " 
+		set slot 13 of {_shopcitizen} to skeleton skull named "&f&lSkull Shop" 
+		set slot 14 of {_shopcitizen} to black glass pane named " " 
+		set slot 15 of {_shopcitizen} to nametag named "&5&lRanks" 
+		set slot 16 of {_shopcitizen} to black glass pane named " " 
+		set slot 17 of {_shopcitizen} to black glass pane named " " 
+		set slot 18 of {_shopcitizen} to black glass pane named " " 
+		set slot 19 of {_shopcitizen} to black glass pane named " " 
+		set slot 20 of {_shopcitizen} to black glass pane named " " 
+		set slot 21 of {_shopcitizen} to black glass pane named " " 
+		set slot 22 of {_shopcitizen} to black glass pane named " " 
+		set slot 23 of {_shopcitizen} to black glass pane named " " 
+		set slot 24 of {_shopcitizen} to black glass pane named " " 
+		set slot 25 of {_shopcitizen} to black glass pane named " " 
+		set slot 26 of {_shopcitizen} to black glass pane named " " 
+		open {_shopcitizen} to player 
+on inventory click:
+	if name of event-inventory is "                 &6&lShop":
+		if index of event-slot = -1:
+			send "how" to player
+		else:
+			cancel event
+
+#shopitems-----------------------------------------------------------------------------------
+on inventory click:
+	if name of event-inventory is "                 &6&lShop":
+		if index of event-slot = 11:
+			cancel event
+			set {_shopitems} to a new chest inventory with 1 row named "                 &e&lItems"
+			set slot 0 of {_shopitems} to black glass pane named " " 
+			set slot 1 of {_shopitems} to 16 ender pearl named "&8&lPearls" with lore "&2$500"
+			set slot 2 of {_shopitems} to black glass pane named " " 
+			set slot 3 of {_shopitems} to Flint and steel named "&8&lFlint and steel" with lore "&2$100"
+			set slot 4 of {_shopitems} to black glass pane named " " 
+			set slot 5 of {_shopitems} to 16 Golden Carrots named "&8&lGolden Carrots" with lore "&2$250"
+			set slot 6 of {_shopitems} to black glass pane named " " 
+			set slot 7 of {_shopitems} to golden apple named "&8&lGolden Apple" with lore "&2$650"
+			set slot 8 of {_shopitems} to black glass pane named " " 
+			open {_shopitems} to player
+on inventory click:
+	if name of event-inventory is "                 &e&lItems":
+		if index of event-slot is 1:
+			if event-inventory is not player's inventory:
+				if {money::%uuid of player%} > 499.99:
+					subtract 500 from {money::%uuid of player%}
+					give player 16 ender pearls 
+					play sound "minecraft:entity.experience_orb.pickup"
+					send "&2&lSuccessful Purchase" to player
+				else:
+					send "&4&lInsuffiecient funds"
+					play sound "entity.villager.no"
+on inventory click:
+	if name of event-inventory is "                 &e&lItems":
+		if index of event-slot is 3:
+			if event-inventory is not player's inventory:
+				if {money::%uuid of player%} > 99.99:
+					subtract 100 from {money::%uuid of player%}
+					give player flint and steel
+					play sound "minecraft:entity.experience_orb.pickup"
+					send "&2&lSuccessful Purchase" to player
+				else:
+					send "&4&lInsuffiecient funds"
+					play sound "entity.villager.no"
+on inventory click:
+	if name of event-inventory is "                 &e&lItems":
+		if index of event-slot is 5:
+			if event-inventory is not player's inventory:
+				if {money::%uuid of player%} > 249.99:
+					subtract 250 from {money::%uuid of player%}
+					give player 16 golden carrots
+					play sound "minecraft:entity.experience_orb.pickup"
+					send "&2&lSuccessful Purchase" to player
+				else:
+					send "&4&lInsuffiecient funds"
+					play sound "entity.villager.no"
+on inventory click:
+	if name of event-inventory is "                 &e&lItems":
+		if index of event-slot is 7:
+			if event-inventory is not player's inventory:
+				if {money::%uuid of player%} > 649.99:
+					subtract 750 from {money::%uuid of player%}
+					give player golden apple
+					play sound "minecraft:entity.experience_orb.pickup"
+					send "&2&lSuccessful Purchase" to player
+				else:
+					send "&4&lInsuffiecient funds"
+					play sound "entity.villager.no"
+
+on inventory click:
+	if name of event-inventory is "                 &e&lItems":
+		cancel event
+		
+
+#shopitems-----------------------------------------------------------------------------------#skullshop---------------------------------------------------------------------------------			
+on inventory click:
+	if name of event-inventory is "                 &6&lShop":
+		if index of event-slot = 13:
+			cancel event
+			set {_skullshop} to a new chest inventory with 1 row named "             &f&lSkull Shop"
+			set slot 0 of {_skullshop} to black glass pane named " " 
+			set slot 1 of {_skullshop} to Heart of the sea named "&f&lClass Reset" with lore "&f&l10 &r&fSkulls 💀"
+			set slot 2 of {_skullshop} to black glass pane named " " 
+			set slot 3 of {_skullshop} to book and quill named "&f&lSell Heads for 10%% More Money &r&8(stackable)" with lore "&f&l5 &r&fSkulls 💀"
+			set slot 4 of {_skullshop} to black glass pane named " " 
+			set slot 5 of {_skullshop} to book and quill named "&f&lLose 50%% Less Money on Death &r&8(not stackable)" with lore "&f&l20 &r&fSkulls 💀"
+			set slot 6 of {_skullshop} to black glass pane named " " 
+			set slot 7 of {_skullshop} to golden apple named "&f&lUnlock Hidden Class" with lore "&f&l100 &r&fSkulls 💀"
+			set slot 8 of {_skullshop} to black glass pane named " " 
+			open {_skullshop} to player
+on inventory click:
+	if name of event-inventory is "             &f&lSkull Shop":
+		if index of event-slot is 1:
+			if event-inventory is not player's inventory:
+				if {skulls::%uuid of player%} > 9:
+					subtract 10 from {skulls::%uuid of player%}
+					give Heart of the sea named "&f&lClass Reset" with lore "&f&l10 &r&fSkulls 💀" to player
+					play sound "minecraft:entity.experience_orb.pickup"
+					send "&2&lSuccessful Purchase" to player
+					close inventory of player
+				else:
+					send "&4&lInsuffiecient funds"
+					play sound "entity.villager.no"
+on inventory click:
+	if name of event-inventory is "             &f&lSkull Shop":
+		if index of event-slot is 3:
+			if event-inventory is not player's inventory:
+				if {skulls::%uuid of player%} > 4:
+					subtract 5 from {skulls::%uuid of player%}
+					set {skullmulti::%uuid of player%} to {skullmulti::%uuid of player%} * 1.1
+					play sound "minecraft:entity.experience_orb.pickup"
+					send "&2&lSuccessful Purchase. You now sell skulls for %{skullmulti::%uuid of player%}%" to player
+					close inventory of player
+				else:
+					send "&4&lInsuffiecient funds"
+					play sound "entity.villager.no"
+on inventory click:
+	if name of event-inventory is "             &f&lSkull Shop":
+		cancel event
+		
+command /multireset:
+	trigger:
+		set {skullmulti::%uuid of player%} to 100
+		send "%{skullmulti::%uuid of player%}%" to player
+command /multicheck:
+	trigger:
+		send "%{skullmulti::%uuid of player%}%" to player
+#skullshop-----------------------------------------------------------------------------------
+
+		
+
+	

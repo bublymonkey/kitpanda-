@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 91.7.145.167
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1707879219415
+  login: 1707878920710
+money: '0'
+last-account-name: jailedcoconut479
+lastlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -697.1642370320768
+  y: 113.0
+  z: -168.7415770372329
+  yaw: 89.94894409179688
+  pitch: 25.521076202392578
+logoutlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -716.1215690831374
+  y: 163.2581048333315
+  z: -160.99986866479847
+  yaw: 288.92889404296875
+  pitch: 8.68033504486084

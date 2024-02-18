@@ -1,0 +1,64 @@
+# === Skript's variable storage ===
+# Please do not modify this file manually!
+#
+# version: 2.7.0-beta2
+
+\_block, block, 8405776F726C6480FF0000000181046E616D65208007576F726C645F31017803FFFFFD4701790300000039017A03FFFFFF9E
+berserkerlvlbrunothepanda, long, 0000000000000001
+berserkerlvlcalthepanda, long, 0000000000000001
+bowmanlvlbrunothepanda, long, 0000000000000001
+bowmanlvlcalthepanda, long, 0000000000000001
+chosenclass::<none>, string, 8009436C6173736C657373
+chosenclass::bestenderman25, string, 800FC2A762C2A76C53776F7264736D616E
+chosenclass::brunothepanda, string, 8010C2A763C2A76C4A75676765726E617574
+chosenclass::bublymonkey, long, 0000000000000001
+chosenclass::calthepanda, string, 8010C2A763C2A76C4A75676765726E617574
+chosenclass::thatoneguy786, string, 800FC2A762C2A76C53776F7264736D616E
+deaths::.fervidcat928034, long, 0000000000000001
+deaths::brunothepanda, long, 000000000000000D
+deaths::bublymonkey, long, 0000000000000002
+deaths::calthepanda, long, 0000000000000018
+deaths::dumplingsareyum, long, 0000000000000005
+deaths::eh7, long, 0000000000000004
+forwards, long, 0000000000000000
+katana::brunothepanda, long, 0000000000000000
+katana::calthepanda, long, 0000000000000000
+kdr::.fervidcat928034, double, 0000000000000000
+kdr::bestenderman25, double, 7FF0000000000000
+kdr::brunothepanda, double, 3FF0000000000000
+kdr::bublymonkey, double, 3FF0000000000000
+kdr::calthepanda, double, 3FF0AAAAAAAAAAAB
+kdr::dumplingsareyum, double, 0000000000000000
+kdr::eh7, double, 3FE8000000000000
+kdr::pineapplegoys, double, 7FF0000000000000
+kills::bestenderman25, long, 0000000000000005
+kills::brunothepanda, long, 000000000000000D
+kills::bublymonkey, long, 0000000000000002
+kills::calthepanda, long, 0000000000000019
+kills::eh7, long, 0000000000000003
+kills::pineapplegoys, long, 0000000000000001
+knightlvlcalthepanda, long, 0000000000000001
+lol.bestenderman25, long, 0000000000000032
+lol.calthepanda, long, 0000000000000032
+lol.dumplingsareyum, long, 0000000000000032
+mercenarylvlbrunothepanda, long, 0000000000000001
+mercenarylvlcalthepanda, long, 0000000000000001
+money::bestenderman25, long, 000000000000001A
+money::brunothepanda, long, 0000000000001163
+money::bublymonkey, long, 000000000013D652
+money::calthepanda, long, 0000000000987F68
+money::eh7, long, 000000000000004B
+money::pineapplegoys, long, 0000000000000019
+ninjalvlcalthepanda, long, 0000000000000001
+paladinlvlbrunothepanda, long, 0000000000000001
+paladinlvlcalthepanda, long, 0000000000000001
+rangerbrunothepanda, long, 0000000000000001
+samarailvlcalthepanda, long, 0000000000000001
+samurailvlbestenderman25, long, 0000000000000001
+samurailvlbrunothepanda, long, 0000000000000001
+samurailvlcalthepanda, long, 0000000000000001
+turtleactive, long, 0000000000000001
+turtlelvlbrunothepanda, long, 0000000000000001
+turtlelvlcalthepanda, long, 0000000000000001
+withercd::calthepanda, long, 0000000000000000
+

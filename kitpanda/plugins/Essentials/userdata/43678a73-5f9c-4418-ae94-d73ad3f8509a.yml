@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 171.148.90.230
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1692295915046
+  login: 1692295819476
+money: '0'
+last-account-name: shadow_hmm
+lastlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: 18.625653524927976
+  y: 4.0
+  z: -106.75264705054154
+  yaw: 311.28131103515625
+  pitch: 14.08399772644043
+logoutlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -70.65827022836798
+  y: 4.0
+  z: -155.44472205231614
+  yaw: 41.681304931640625
+  pitch: 89.3253173828125

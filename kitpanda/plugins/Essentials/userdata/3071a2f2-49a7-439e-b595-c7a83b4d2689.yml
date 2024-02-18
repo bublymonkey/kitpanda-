@@ -1,0 +1,40 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 12.129.39.138
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1707422789218
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1707422829572
+  login: 1707422782469
+  kits:
+    panda: 1692732541905
+money: '0'
+last-account-name: ItzTreaty
+lastlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -690.5297554456664
+  y: 164.0785153857997
+  z: -167.71889740297655
+  yaw: -233.46600341796875
+  pitch: 62.195335388183594
+logoutlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -707.3340743637528
+  y: 115.90746447522986
+  z: -169.32560782609076
+  yaw: 288.82940673828125
+  pitch: 31.848398208618164

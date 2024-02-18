@@ -1,0 +1,68 @@
+on join:
+	set {cooldownpal::%uuid of player%} to false
+	set {cooldownknightsword::%uuid of player%} to false
+	set {cooldownsam::%uuid of player%} to false
+	set {cooldownsamab::%uuid of player%} to 0
+	set {cooldownsamabcooldown::%uuid of player%} to false
+	set {cooldownbow::%uuid of player%} to false
+on right click with gold axe:
+	if name of held item of player is "&6Paladin axe":
+		if {cooldownpal::%uuid of player%} is false:
+			apply regeneration 2 to player for 5 seconds
+			apply absorption 1 to player for 15 seconds
+			set {cooldownpal::%uuid of player%} to true
+			halt 30 seconds
+			set {cooldownpal::%uuid of player%} to false
+		else if {cooldownpal::%uuid of player%} is true:
+			sendcooldown(player)
+on right click with iron sword:
+	if name of held item of player is "&bSamurai katana":
+		if {cooldownsam::%uuid of player%} is false:
+			set {cooldownsam::%uuid of player%} to true
+			set {cooldownsamab::%uuid of player%} to 1
+			set {cooldownsamabcooldown::%uuid of player%} to false
+			apply speed 1 to player for 30 seconds
+			apply strength 1 to player for 30 seconds
+			halt 30 seconds
+			set {cooldownsam::%uuid of player%} to false
+			set {cooldownsamab::%uuid of player%} to 0
+		else if {cooldownsamab::%uuid of player%} is 1:
+			if {cooldownsamabcooldown::%uuid of player%} is false:
+				push player forwards at speed 1.5
+				set {cooldownsamabcooldown::%uuid of player%} to true
+				halt 3 seconds
+				set {cooldownsamabcooldown::%uuid of player%} to false
+			else:
+				sendcooldown(player)
+		else if {cooldownsam::%uuid of player%} is true:
+			sendcooldown(player)
+on arm swing:
+	if name of held item of player is "&5Bowman bow":
+		if {cooldownbow::%uuid of player%} is false:
+			push player upwards with speed 1.5
+			wait 5 ticks
+			push player forward with speed -3
+			apply slow falling 5 to player for 3 seconds
+			set {cooldownbow::%uuid of player%} to true
+			halt 3 seconds
+			apply slow falling 5 to player for 3 seconds
+			push player downwards with speed 5
+			halt 15 seconds
+			set {cooldownbow::%uuid of player%} to false
+		if {cooldownbow::%uuid of player%} is true:
+			sendcooldown(player)
+			
+function sendcooldown(p:player):
+		send "" to {_p}
+		send "&8[&c!&8] &cYou have a cooldown on that ability" to {_p}
+		send "" to {_p}
+		play sound "entity.experience_orb.pickup" with volume 0.5 to {_p}
+		play sound "minecraft:entity.villager.no" with volume 0.5 to {_p}
+
+on quit:
+    delete {cooldownpal::%uuid of player%}
+    delete {cooldownknightsword::%uuid of player%}
+    delete {cooldownsam::%uuid of player%}
+    delete {cooldownsamab::%uuid of player%}
+    delete {cooldownsamabcooldown::%uuid of player%}
+    delete {cooldownbow::%uuid of player%}

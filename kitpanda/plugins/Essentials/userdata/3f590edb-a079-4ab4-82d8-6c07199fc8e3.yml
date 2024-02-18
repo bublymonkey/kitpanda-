@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 50.153.155.11
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1693467493776
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1693467536168
+  login: 1693466792697
+money: '0'
+last-account-name: ThatOneGuy786
+lastlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -692.9388071779545
+  y: 21.0
+  z: -182.6165002651973
+  yaw: -187.88003540039062
+  pitch: 7.064854145050049
+logoutlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -729.944242760286
+  y: 65.12605979863753
+  z: -181.00420431723074
+  yaw: 53.72224426269531
+  pitch: 23.368562698364258

@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 158.141.194.222
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1693617989752
+  login: 1693617943270
+money: '0'
+last-account-name: DumplingsAreYum
+lastlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -717.967863609744
+  y: 70.15105954105222
+  z: -207.369263230016
+  yaw: -147.5394287109375
+  pitch: 42.209041595458984
+logoutlocation:
+  world: 0aa74439-b39a-47de-ad7e-330f58cba886
+  world-name: World_1
+  x: -714.1129259880215
+  y: 56.5
+  z: -177.16809715082886
+  yaw: -120.29764556884766
+  pitch: 4.3258185386657715

@@ -1,0 +1,12 @@
+location: World_1:-692.605:23.000:-137.300
+enabled: true
+display-range: 48
+update-range: 48
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '&l&9[Press Shift]'
+    height: 0.3
+  actions: {}

@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 86.42.247.244
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1692286852814
+  login: 1692286839361
+money: '0'
+last-account-name: Bambelbi87
+lastlocation:
+  world: b12ce0e7-8258-48b4-818d-dbb0b99f3b1e
+  world-name: world
+  x: 33.5
+  y: 61.0
+  z: -45.5
+  yaw: 5.5263519287109375
+  pitch: 0.0
+logoutlocation:
+  world: b12ce0e7-8258-48b4-818d-dbb0b99f3b1e
+  world-name: world
+  x: 24.9033335671843
+  y: 65.0
+  z: -40.28119397574221
+  yaw: -83.04443359375
+  pitch: 8.38955307006836

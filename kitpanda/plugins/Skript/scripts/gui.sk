@@ -1,0 +1,238 @@
+on join:
+	set {classconfirmation::%uuid of player%} to 0
+on join:
+	wait 1 tick
+	if {chosenclass::%uuid of player%} is not set:
+		set {chosenclass::%uuid of player%} to "Classless"
+		set {_guistarter} to a new chest inventory with 1 row named "           &c&lStarter Class"
+		set slot 0 of {_guistarter} to black stained glass pane named " "
+		set slot 1 of {_guistarter} to black stained glass pane named " "
+		set slot 2 of {_guistarter} to iron sword named "&b&lSwordsman" with lore "This class specializes in close%nl%ranged combat with high dps and%nl%fast-paced gameplay"
+		set slot 3 of {_guistarter} to black stained glass pane named " "
+		set slot 4 of {_guistarter} to iron chestplate named "&c&lJuggernaut" with lore "This class has high defense and%nl%uses close ranged attacks"
+		set slot 5 of {_guistarter} to black stained glass pane named " "
+		set slot 6 of {_guistarter} to arrow named "&e&lMarksman" with lore "This class specializes in ranged%nl%weapons but has low defense"
+		set slot 7 of {_guistarter} to black stained glass pane named " "
+		set slot 8 of {_guistarter} to black stained glass pane named " "
+		open {_guistarter} to player
+
+on inventory close:
+	if name of event-inventory is "           &c&lStarter Class":
+		wait 2 tick	
+		if {classconfirmation::%uuid of player%} is 0:
+			open event-inventory to player
+on join:
+	if {chosenclass::%uuid of player%} is "Classless":
+		set {_guistarter} to a new chest inventory with 1 row named "           &c&lStarter Class"
+		set slot 0 of {_guistarter} to black stained glass pane named " "
+		set slot 1 of {_guistarter} to black stained glass pane named " "
+		set slot 2 of {_guistarter} to iron sword named "&b&lSwordsman" with lore "This class specializes in close%nl%ranged combat with high dps and%nl%fast-paced gameplay"
+		set slot 3 of {_guistarter} to black stained glass pane named " "
+		set slot 4 of {_guistarter} to iron chestplate named "&c&lJuggernaut" with lore "This class has high defense and%nl%uses close ranged attacks"
+		set slot 5 of {_guistarter} to black stained glass pane named " "
+		set slot 6 of {_guistarter} to arrow named "&e&lMarksman" with lore "This class specializes in ranged%nl%weapons but has low defense"
+		set slot 7 of {_guistarter} to black stained glass pane named " "
+		set slot 8 of {_guistarter} to black stained glass pane named " "
+		open {_guistarter} to player 
+	
+
+command /classreset [<player>]:
+	trigger:
+		if arg 1 is set:
+			set {chosenclass::%uuid of arg 1%} to "Classless"
+			wait 1 tick
+			set {_guistarter} to a new chest inventory with 1 row named "           &c&lStarter Class"
+			set slot 0 of {_guistarter} to black stained glass pane named " "
+			set slot 1 of {_guistarter} to black stained glass pane named " "
+			set slot 2 of {_guistarter} to iron sword named "&b&lSwordsman" with lore "This class specializes in close%nl%ranged combat with high dps and%nl%fast-paced gameplay"
+			set slot 3 of {_guistarter} to black stained glass pane named " "
+			set slot 4 of {_guistarter} to iron chestplate named "&c&lJuggernaut" with lore "This class has high defense and%nl%uses close ranged attacks"
+			set slot 5 of {_guistarter} to black stained glass pane named " "
+			set slot 6 of {_guistarter} to arrow named "&e&lMarksman" with lore "This class specializes in ranged%nl%weapons but has low defense"
+			set slot 7 of {_guistarter} to black stained glass pane named " "
+			set slot 8 of {_guistarter} to black stained glass pane named " "
+			open {_guistarter} to arg 1
+		else:
+			set {chosenclass::%uuid of player%} to "Classless"
+			wait 1 tick
+			set {_guistarter} to a new chest inventory with 1 row named "           &c&lStarter Class"
+			set slot 0 of {_guistarter} to black stained glass pane named " "
+			set slot 1 of {_guistarter} to black stained glass pane named " "
+			set slot 2 of {_guistarter} to iron sword named "&b&lSwordsman" with lore "This class specializes in close%nl%ranged combat with high dps and%nl%fast-paced gameplay"
+			set slot 3 of {_guistarter} to black stained glass pane named " "
+			set slot 4 of {_guistarter} to iron chestplate named "&c&lJuggernaut" with lore "This class has high defense and%nl%uses close ranged attacks"
+			set slot 5 of {_guistarter} to black stained glass pane named " "
+			set slot 6 of {_guistarter} to arrow named "&e&lMarksman" with lore "This class specializes in ranged%nl%weapons but has low defense"
+			set slot 7 of {_guistarter} to black stained glass pane named " "
+			set slot 8 of {_guistarter} to black stained glass pane named " "
+			open {_guistarter} to player 
+command /classcheck [<player>]:
+	trigger:
+		if arg 1 is set:
+			send "%arg 1%'s class is &l%{chosenclass::%uuid of arg 1%}%" to player
+		else:
+			send "your class is &l%{chosenclass::%uuid of player%}%" to player
+#===========================================Choose_CLASS=====================================
+command /class:
+	trigger:
+		if {chosenclass::%uuid of player%} = "&b&lSwordsman":
+			set {_sclass} to a new chest inventory with 1 rows named "            &3&lCLASS KITS"
+			set slot 2 of {_sclass} to iron sword named "Samurai" with lore "&7Click to equip kit"
+			set slot 4 of {_sclass} to iron helmet named "Knight" with lore "&7Click to equip kit"
+			set slot 6 of {_sclass} to leather boots named "Ninja" with lore "&7Click to equip kit"
+			open {_sclass} to player
+		if {chosenclass::%uuid of player%} = "&c&lJuggernaut":
+			set {_jclass} to a new chest inventory with 1 rows named "            &3&lCLASS KITS "
+			set slot 2 of {_jclass} to golden helmet named "Paladin" with lore "&7Click to equip kit"
+			set slot 4 of {_jclass} to stone axe named "Berserker" with lore "&7Click to equip kit"
+			set slot 6 of {_jclass} to turtle helmet named "Turtle" with lore "&7Click to equip kit"
+			open {_jclass} to player
+		if {chosenclass::%uuid of player%} = "&e&lMarksman":
+			set {_mclass} to a new chest inventory with 1 rows named "            &3&lCLASS KITS  "
+			set slot 2 of {_mclass} to crossbow named "Mercenary" with lore "&7Click to equip kit"
+			set slot 4 of {_mclass} to bow named "Bowman" with lore "&7Click to equip kit"
+			set slot 6 of {_mclass} to lead named "Ranger" with lore "&7Click to equip kit"
+			open {_mclass} to player
+			
+
+#==========================================Choose_CLASS======================================#===========================================ConfirmClassSwordsmen============================
+on inventory click:
+	if name of event-inventory is "           &c&lStarter Class":
+		cancel event
+		if index of event-slot = 2:
+			set {classconfirmation::%uuid of player%} to 1
+			set {_sconfirm} to a new chest inventory with 3 row named "          &a&lCONFIRM CLASS"
+			set slot 12 of {_sconfirm} to lime stained glass pane named "&aConfirm" with lore "Are you sure you want to choose %nl%&bSwordsman &5as your class? It will%nl%cost money to change your class %nl%once you have picked."
+			set slot 14 of {_sconfirm} to red stained glass pane named "&cCancel" with lore "Go back to class selection."
+			open {_sconfirm} to player
+
+on inventory click:
+	if name of event-inventory is "          &a&lCONFIRM CLASS":
+		cancel event
+		if index of event-slot = 12:
+			set {chosenclass::%uuid of player%} to "&b&lSwordsman"
+			send "&7&l You have chosen &b&lSWORDSMAN &7as your class" to player
+			close player's inventory
+on inventory click:
+	if name of event-inventory is "          &a&lCONFIRM CLASS":
+		if index of event-slot = 14:
+			cancel event
+			set {_guistarter} to a new chest inventory with 1 row named "           &c&lStarter Class"
+			set slot 0 of {_guistarter} to black stained glass pane named " "
+			set slot 1 of {_guistarter} to black stained glass pane named " "
+			set slot 2 of {_guistarter} to iron sword named "&b&lSwordsman" with lore "This class specializes in close%nl%ranged combat with high dps and%nl%fast-paced gameplay"
+			set slot 3 of {_guistarter} to black stained glass pane named " "
+			set slot 4 of {_guistarter} to iron chestplate named "&c&lJuggernaut" with lore "This class has high defense and%nl%uses close ranged attacks"
+			set slot 5 of {_guistarter} to black stained glass pane named " "
+			set slot 6 of {_guistarter} to arrow named "&e&lMarksman" with lore "This class specializes in ranged%nl%weapons but has low defense"
+			set slot 7 of {_guistarter} to black stained glass pane named " "
+			set slot 8 of {_guistarter} to black stained glass pane named " "
+			open {_guistarter} to player
+#============================================ConfirmClassSwordsmen===========================
+#===================================ConfirmClassJuggerNaut==================================
+on inventory click: 
+	if name of event-inventory is "           &c&lStarter Class":
+		if index of event-slot = 4:
+			cancel event 
+			set {classconfirmation::%uuid of player%} to 1
+			set {_jconfirm} to a new chest inventory with 3 row named "          &a&lCONFIRM CLASS "
+			set slot 12 of {_jconfirm} to lime stained glass pane named "&aConfirm" with lore "Are you sure you want to choose %nl%&cJuggernaut&5 as your class? It will%nl%cost money to change your class %nl%once you have picked."
+			set slot 14 of {_jconfirm} to red stained glass pane named "&cCancel" with lore "Go back to class selection."
+			open {_jconfirm} to player
+
+on inventory click:
+	if name of event-inventory is "          &a&lCONFIRM CLASS ":
+		if index of event-slot = 12:
+			cancel event
+			set {chosenclass::%uuid of player%} to "&c&lJuggernaut"
+			send "&7&l You have chosen &c&lJuggernaut &7as your class" to player
+			close player's inventory
+on inventory click:
+	if name of event-inventory is "          &a&lCONFIRM CLASS ":
+		if index of event-slot = 14:
+			cancel event
+			set {_guistarter} to a new chest inventory with 1 row named "           &c&lStarter Class"
+			set slot 0 of {_guistarter} to black stained glass pane named " "
+			set slot 1 of {_guistarter} to black stained glass pane named " "
+			set slot 2 of {_guistarter} to iron sword named "&b&lSwordsman" with lore "This class specializes in close%nl%ranged combat with high dps and%nl%fast-paced gameplay"
+			set slot 3 of {_guistarter} to black stained glass pane named " "
+			set slot 4 of {_guistarter} to iron chestplate named "&c&lJuggernaut" with lore "This class has high defense and%nl%uses close ranged attacks"
+			set slot 5 of {_guistarter} to black stained glass pane named " "
+			set slot 6 of {_guistarter} to arrow named "&e&lMarksman" with lore "This class specializes in ranged%nl%weapons but has low defense"
+			set slot 7 of {_guistarter} to black stained glass pane named " "
+			set slot 8 of {_guistarter} to black stained glass pane named " "
+			open {_guistarter} to player
+#============================================ConfirmClassJuggerNaut==========================
+#============================================ConfirmMarksman=================================
+on inventory click:
+	if name of event-inventory is "           &c&lStarter Class":
+		if index of event-slot = 6:
+			cancel event 
+			set {classconfirmation::%uuid of player%} to 1
+			set {_mconfirm} to a new chest inventory with 3 row named "          &a&lCONFIRM CLASS   "
+			set slot 12 of {_mconfirm} to lime stained glass pane named "&aConfirm" with lore "Are you sure you want to choose %nl%&eMarksman&5 as your class? It will%nl%cost money to change your class %nl%once you have picked."
+			set slot 14 of {_mconfirm} to red stained glass pane named "&cCancel" with lore "Go back to class selection."
+			open {_mconfirm} to player
+
+on inventory click:
+	if name of event-inventory is "          &a&lCONFIRM CLASS   ":
+		if index of event-slot = 12:
+			cancel event
+			set {chosenclass::%uuid of player%} to "&e&lMarksman"
+			send "&7&l You have chosen &e&lMarksman &7as your class" to player
+			close player's inventory
+on inventory click:
+	if name of event-inventory is "          &a&lCONFIRM CLASS   ":
+		if index of event-slot = 14:
+			cancel event
+			set {_guistarter} to a new chest inventory with 1 row named "           &c&lStarter Class"
+			set slot 0 of {_guistarter} to black stained glass pane named " "
+			set slot 1 of {_guistarter} to black stained glass pane named " "
+			set slot 2 of {_guistarter} to iron sword named "&b&lSwordsman" with lore "This class specializes in close%nl%ranged combat with high dps and%nl%fast-paced gameplay"
+			set slot 3 of {_guistarter} to black stained glass pane named " "
+			set slot 4 of {_guistarter} to iron chestplate named "&c&lJuggernaut" with lore "This class has high defense and%nl%uses close ranged attacks"
+			set slot 5 of {_guistarter} to black stained glass pane named " "
+			set slot 6 of {_guistarter} to arrow named "&e&lMarksman" with lore "This class specializes in ranged%nl%weapons but has low defense"
+			set slot 7 of {_guistarter} to black stained glass pane named " "
+			set slot 8 of {_guistarter} to black stained glass pane named " "
+			open {_guistarter} to player
+#==============================================ConfirmMarksman==============================
+command /shop:
+	trigger:
+		set {_shopcitizen} to a new chest inventory with 3 row named "                 &6&lShop"
+		set slot 0 of {_shopcitizen} to black glass pane named " " 
+		set slot 1 of {_shopcitizen} to black glass pane named " " 
+		set slot 2 of {_shopcitizen} to black glass pane named " " 
+		set slot 3 of {_shopcitizen} to black glass pane named " " 
+		set slot 4 of {_shopcitizen} to black glass pane named " " 
+		set slot 5 of {_shopcitizen} to black glass pane named " " 
+		set slot 6 of {_shopcitizen} to black glass pane named " " 
+		set slot 7 of {_shopcitizen} to black glass pane named " " 
+		set slot 8 of {_shopcitizen} to black glass pane named " " 
+		set slot 9 of {_shopcitizen} to black glass pane named " " 
+		set slot 10 of {_shopcitizen} to black glass pane named " " 
+		set slot 11 of {_shopcitizen} to a ender pearl named "&8&lItems" 
+		set slot 12 of {_shopcitizen} to black glass pane named " " 
+		set slot 13 of {_shopcitizen} to iron horse armour named "&3&lClass items " 
+		set slot 14 of {_shopcitizen} to black glass pane named " " 
+		set slot 15 of {_shopcitizen} to nametag named "&5&lRanks " 
+		set slot 16 of {_shopcitizen} to black glass pane named " " 
+		set slot 17 of {_shopcitizen} to black glass pane named " " 
+		set slot 18 of {_shopcitizen} to black glass pane named " " 
+		set slot 19 of {_shopcitizen} to black glass pane named " " 
+		set slot 20 of {_shopcitizen} to black glass pane named " " 
+		set slot 21 of {_shopcitizen} to black glass pane named " " 
+		set slot 22 of {_shopcitizen} to black glass pane named " " 
+		set slot 23 of {_shopcitizen} to black glass pane named " " 
+		set slot 24 of {_shopcitizen} to black glass pane named " " 
+		set slot 25 of {_shopcitizen} to black glass pane named " " 
+		set slot 26 of {_shopcitizen} to black glass pane named " " 
+		open {_shopcitizen} to player 
+	
+
+
+
+		
+			
+
+	
